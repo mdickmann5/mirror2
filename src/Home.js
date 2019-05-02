@@ -8,6 +8,7 @@ import $ from 'jquery';
 import youtube from './youtube';
 import readline from 'readline';
 import google from 'googleapis';
+import localProperties from './properties.js';
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
                   "July", "August", "September", "October", "November", "December"];
@@ -122,7 +123,7 @@ export default class Home extends Component {
     getTemp() : String {
         var that = this;
         if (this.state.tempSet == false) {
-                    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Lansing,US&appid=826a43399932cec0eccdf4a79709b4d1')
+                    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Lansing,US&appid=' + {localProperties.weatherAppId})
           .then(function (response) {
             var kelvin = parseFloat(response.data.main.temp);
             var fahren = (kelvin * (9.0/5.0)) -459.67;
