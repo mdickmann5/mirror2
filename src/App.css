@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#weather {
+    color: white;
+    position: relative;
+    bottom: 20px;
+}
+
+* {
+    cursor : none;
+}
+
+#weatherSymbol {
+    height : 70px;
+}
+
+#top {
+    position: relative;
+    bottom: 120px;
+}
+
+#top > div {
+    margin-right: 10px;	
+    display: inline-block;
+}
+
+#reminders {
+	position:relative;
+	left:100px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
